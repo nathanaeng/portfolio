@@ -1,0 +1,174 @@
+.results-container {
+    max-height: 620px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: calc(var(--search-padding) * 1px);
+}
+
+.results-container:empty {
+    display: none;
+}
+
+.result-box {
+    position: relative;
+    border-radius: 0.4rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dark-result-box {
+    background-color: rgba(236, 247, 253, 0.3) !important;
+}
+
+.result-box:not(:first-child) {
+    margin-top: calc(var(--search-padding) * 1px);
+}
+
+.resume {
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.resume-download {
+    position: absolute;
+    bottom: 20px;
+    color: gray;
+}
+
+.result-me {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+.result-text {
+    margin-top: 4px;
+    line-height: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 24px;
+}
+
+.thumbnail, .thumbnail-gt, .thumbnail-song {
+    float: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.thumbnail-song {
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+}
+
+.project-date {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 14px;
+}
+
+.project-info {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    word-wrap: break-word;
+    font-size: 20px;
+}
+
+.position {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 20px;
+}
+
+.work-location, .work-date {
+    margin-left: 1rem;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+    font-size: 14px;
+}
+
+.work-description {
+    margin-right: 1rem;
+    font-size: 20px;
+}
+
+.result-label {
+    position: relative;
+    margin-left: 1rem;
+    top: -0.2rem;
+    opacity: 0.75;
+    font-size: 18px;
+}
+
+.result-by {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+.react-pdf__Page__canvas {
+    margin: 0 auto;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+}
+
+.modal {
+    overflow-x: hidden;
+}
+
+.modal-width {
+    max-width: 90%;
+}
+
+.btn-close:active {
+    box-shadow: none;
+}
+
+.music-clip {
+    border-radius: 12px;
+    width: 100%;
+    height: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 600px) {
+    .modal-width {
+        max-width: 100%;
+    }
+
+    .results-container {
+        max-height: 420px !important;
+    }
+
+    .result-text, .position {
+        line-height: 24px;
+        font-size: 18px;
+    }
+
+    .result-by, .result-label {
+        font-size: 14px;
+    }
+
+    .thumbnail-gt {
+        margin-top: 0.6rem;
+    }
+
+    .thumbnail-song {
+        width: 90px;
+    }
+
+    .project-info, .work-description {
+        font-size: 18px;
+    }
+}

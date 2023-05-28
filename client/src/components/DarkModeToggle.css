@@ -1,0 +1,33 @@
+.darkmode-toggle-btn {
+    opacity: 0;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+}
+
+.darkmode-svg {
+    pointer-events: none;
+}
+
+.dark-bg {
+    background-color: rgb(35, 35, 35);
+}
+
+.dark {
+    color: white !important;
+}
+
+.dark.content-box {
+    background-color: rgba(75, 75, 75, 0.5) !important;
+}
+
+.dark.searchbar {
+    background-color: rgba(236, 247, 253, 0.1) !important;
+}
+
+.dark.results-container > * {
+    background-color: rgba(236, 247, 253, 0.2) !important;
+}

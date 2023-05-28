@@ -1,0 +1,170 @@
+:root {
+    --search-padding: 12;
+    --content-width: 830;
+    --new-width: calc((var(--content-width) * 0.5) - var(--search-padding));
+    --scale: calc((var(--new-width) - (var(--search-padding) * 0.5)) / var(--new-width));
+}
+
+.all {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Creates a small gap below .content-box when the height
+of the window is small (looks better) */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 620px;
+}
+
+.content-box {
+    position: relative;
+    top: 50px;
+    background-color: rgba(100, 100, 100, 0.2);
+    padding: calc(var(--search-padding) * 1px);
+    border-radius: 0.3rem;
+    box-shadow: 0px 0px 5px 1px rgba(122, 122, 122, 0.2);
+    width: 90%;
+    max-width: calc(var(--content-width) * 1px);
+    transition: scale 0.5s ease, transform 0.5s ease;
+    transform-origin: top;
+    scale: 0.5 0.75;
+}
+
+.content-box > .searchbar > .search-icon,
+.content-box > .searchbar > input {
+    transform-origin: -5%;
+    scale: 1.5 1;
+}
+
+.content-box > .searchbar {
+    scale: calc(var(--scale)) 1;
+}
+
+.expand {
+    scale: 1;
+    transition: scale 0.5s ease, transform 0.5s ease;
+    transform-origin: top;
+    transform: translateY(-170px);
+}
+
+.expand > .searchbar > .search-icon,
+.expand > .searchbar > input {
+    transform-origin: left;
+    scale: 1;
+}
+
+.expand > .searchbar {
+    scale: 1;
+}
+
+@media (min-width: 600px) {
+    .title-container:has(.show) + .expand {
+        transform: translateY(-314px) !important;
+    }
+
+    .blur {
+        filter: blur(12px);
+        pointer-events: none;
+        user-select: none;
+    }
+}
+
+.title {
+    font-size: 80px;
+    margin-top: 1rem;
+    background: -webkit-linear-gradient(rgb(246, 177, 49), rgb(62, 156, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    color: rgb(97, 97, 97);
+    opacity: 0;
+    font-size: 22px;
+    width: 60%;
+    text-align: center;
+    flex: 1;
+}
+
+#about-more {
+    width: 400px;
+    font-size: 16px;
+}
+
+#about-icon {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    bottom: 1px;
+    color: rgb(97, 97, 97);
+    left: -0.2rem;
+}
+
+.title-container {
+    width: 100%;
+    transition: filter 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    will-change: filter;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+@media (max-width: 600px) {
+    .all {
+        margin-bottom: 4rem;
+    }
+
+    .content-box {
+        width: 90%;
+        max-width: 610px;
+        scale: 1;
+        margin-bottom: 3rem;
+    }
+
+    .content-box > .searchbar > .search-icon,
+    .content-box > .searchbar > input {
+        scale: 1
+    }
+
+    .content-box > .searchbar {
+        scale: 1;
+    }
+
+    .expand {
+        transform: translateY(0px) !important;
+    }
+
+    .title {
+        font-size: 50px;
+        margin-top: 4rem;
+    }
+
+    .about {
+        font-size: 18px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #about-more {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+}

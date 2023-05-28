@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.searchbar {
+    transition: all 0.25s;
+    display: flex;
+    width: 100%;
+    border-radius: 0.3rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.search-icon {
+    position: relative;
+    bottom: 2px;
+    background-color: transparent;
+    border: none;
+    color: rgb(29, 130, 225);
+}
+
+.search-input {
+    transition: all 0.25s;
+    flex: 2;
+    border: none;
+    outline: none;
+    margin-right: 2px;
+    font-size: 28px;
+    width: 100%;
+    background-color: transparent;
+    font-family: 'Inter', sans-serif;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+.search-cancel {
+    margin-right: 0.25rem;
+}
+
+.search-cancel {
+    background: none;
+    border: none;
+    color: black;
+    z-index: 3;
+    display: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(97, 97, 97);
+    opacity: 1; /* Firefox */
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(97, 97, 97);
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(97, 97, 97);
+}
+
+/* Dark Mode */
+.dark.search-input::placeholder {
+    color: white;
+    opacity: 1;
+}
+  
+.dark.search-input:-ms-input-placeholder {
+    color: white;
+}
+  
+.dark.search-input::-ms-input-placeholder {
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .search-input {
+        font-size: 18px;
+    }
+}
